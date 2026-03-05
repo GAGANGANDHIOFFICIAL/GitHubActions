@@ -1,0 +1,22 @@
+# This is the workflow name 
+name: Hello Workflow
+
+on:
+  push: 
+      braches: [main]
+
+
+#these are the jobs inside the workflow 
+#Jobs 
+jobs:
+
+    #this is the name of the job 
+    greet:
+        runs-on: ubuntu-latest
+          steps:
+            - name: say hello to users
+              run: echo "hello dosto"
+
+           - name: say hello to username 
+             run: echo "hello to new $USER"
+             
