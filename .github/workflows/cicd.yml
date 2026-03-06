@@ -13,18 +13,21 @@ jobs:
         run: echo "git clone or git pull"
 
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: Here we are building docker file
         run: echo "docker build"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Here we are in the testing phase
         run: echo "testing has been done"
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Here we are deploying the application to AWS
