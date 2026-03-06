@@ -21,12 +21,9 @@ jobs:
   details:
      runs-on: ubuntu-latest
 
-
      steps:
       - name: show details of oython version and docker version
         run: docker --version && python --version
 
 
-     steps:
-       - name: show all the versions of docker and opython
-         run: docker --verision && python --version
+    
