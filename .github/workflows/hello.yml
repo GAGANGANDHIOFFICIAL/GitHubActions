@@ -18,8 +18,13 @@ jobs:
 
       - name: say hello to username
         run: echo "hello to new $USER"
-   details:
+  details:
      runs-on: ubuntu-latest
+
+
+     steps:
+      - name: show details of oython version and docker version
+        run: docker --version && python --version
 
 
      steps:
